@@ -1,4 +1,5 @@
 import random
+import time
 
 def cube_root(x):
     #許容誤差
@@ -34,10 +35,12 @@ def cube_root(x):
 #検証用
 
 if __name__ == '__main__':
+    starttime = time.time()
     x = random.randint(1, 10)
     sol = cube_root(x)
     print(x, sol)
-
+    print('かかった時間:',time.time()-starttime)
+    print()
     #検証用
     for i in range(1,11):
         sol = cube_root(i)
